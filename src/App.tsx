@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router";
-import routes from "../routes"; // Adjusted import path
+import routes from "./routes"; // Adjusted import path
 
 function App() {
     const element = useRoutes(routes);
