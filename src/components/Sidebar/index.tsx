@@ -92,8 +92,8 @@ const Sidebar = () => {
 	return (
 		<div className="fixed left-0 top-0 md:w-[230px] w-[60px] overflow-hidden h-full flex flex-col">
 			<div className="w-full flex items-center md:justify-start justify-center md:pl-5 h-[70px] bg-[#fff]">
-				<span className="text-orange-400 font-semibold text-2xl md:block hidden">KanbanFlow App</span>
-				<span className="text-orange-400 font-semibold text-2xl md:hidden block">KbF</span>
+				<span className="text-blue-400 font-semibold text-2xl md:block hidden">KanbanFlow App</span>
+				<span className="text-blue-400 font-semibold text-2xl md:hidden block">KbF</span>
 			</div>
 			<div className="w-full h-[calc(100vh-70px)] border-r flex flex-col md:items-start items-center gap-2 border-slate-300 bg-[#fff] py-5 md:px-3 px-3 relative">
 				{navLinks.map((link) => {

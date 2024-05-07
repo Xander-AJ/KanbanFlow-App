@@ -16,7 +16,7 @@ const Navbar = () => {
 					width={"28px"}
 					height={"28px"}
 				/>
-				<span className="text-orange-400 font-semibold md:text-lg text-sm whitespace-nowrap">
+				<span className="text-blue-400 font-semibold md:text-lg text-sm whitespace-nowrap">
 					Board Name
 				</span>
 				<ChevronDown
