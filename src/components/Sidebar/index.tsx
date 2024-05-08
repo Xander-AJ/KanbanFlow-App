@@ -3,16 +3,15 @@ import {
 	GridOutline,
 	HomeOutline,
 	LogOutOutline,
-	NewspaperOutline,
-	NotificationsOutline,
-	PeopleOutline,
-	PieChartOutline,
 } from "react-ionicons";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+	const navigate = useNavigate();
 	const navLinks = [
 		{
 			title: "Home",
+			path: "/",
 			icon: (
 				<HomeOutline
 					color="#555"
@@ -24,6 +23,7 @@ const Sidebar = () => {
 		},
 		{
 			title: "Boards",
+			path: "/boards",
 			icon: (
 				<AppsOutline
 					color="#555"
@@ -35,52 +35,9 @@ const Sidebar = () => {
 		},
 		{
 			title: "Projects",
+			path: "/projects",
 			icon: (
 				<GridOutline
-					color="#555"
-					width="22px"
-					height="22px"
-				/>
-			),
-			active: false,
-		},
-		{
-			title: "Analytics",
-			icon: (
-				<PieChartOutline
-					color="#555"
-					width="22px"
-					height="22px"
-				/>
-			),
-			active: false,
-		},
-		{
-			title: "Workflows",
-			icon: (
-				<PeopleOutline
-					color="#555"
-					width="22px"
-					height="22px"
-				/>
-			),
-			active: false,
-		},
-		{
-			title: "Notifications",
-			icon: (
-				<NotificationsOutline
-					color="#555"
-					width="22px"
-					height="22px"
-				/>
-			),
-			active: false,
-		},
-		{
-			title: "Newsletter",
-			icon: (
-				<NewspaperOutline
 					color="#555"
 					width="22px"
 					height="22px"
@@ -99,6 +56,7 @@ const Sidebar = () => {
 				{navLinks.map((link) => {
 					return (
 						<div
+							onClick={ () => navigate(link.path)}
 							key={link.title}
 							className={`flex items-center gap-2 w-full rounded-lg hover:bg-blue-300 px-2 py-3 cursor-pointer ${
 								link.active ? "bg-blue-300" : "bg-transparent"
