@@ -5,7 +5,7 @@
         "description": "Lorem ipsum dolor sit amet ..",
         "priority": "medium",
         "deadline": 50,
-        "image": "taskImage2.jpg",
+        "image": "../src/images/task2.jpg",
         "alt": "task image",
         "tags": [
           { "title": "Test", "color": "#ff0000" },
@@ -39,7 +39,7 @@
         "description": "Lorem ipsum dolor sit amet ..",
         "priority": "low",
         "deadline": 50,
-        "image": "taskImage.jpg",
+        "image": "../src/images/task.jpg",
         "alt": "task image",
         "tags": [
           { "title": "Test", "color": "#ff0000" },
@@ -53,7 +53,7 @@
         "description": "Lorem ipsum dolor sit amet ..",
         "priority": "medium",
         "deadline": 50,
-        "image": "taskImage3.jpg",
+        "image": "../src/images/task3.jpg",
         "alt": "task image",
         "tags": [
           { "title": "Test", "color": "#ff0000" },
@@ -89,7 +89,7 @@
         "description": "Lorem ipsum dolor sit amet ..",
         "priority": "high",
         "deadline": 50,
-        "image": "taskImage.jpg",
+        "image": "../src/images/task.jpg",
         "alt": "task image",
         "tags": [
           { "title": "Test", "color": "#ff0000" },
