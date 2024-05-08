@@ -1,19 +1,28 @@
-export type TaskT = {
-	id: string;
-	title: string;
-	description: string;
-	priority: string;
-	deadline: number;
-	image?: string;
-	alt?: string;
-	tags: { title: string; bg: string; text: string }[];
-};
+import axios from "axios";
 
-type Column = {
-	name: string;
-	items: TaskT[];
-};
+export interface ApiResponse<T> {
+  data: T;
+  status: number;
+  statusText: string;
+  headers: Record<string, string>;
+  config: any;
+}
 
-export type Columns = {
-	[key: string]: Column;
-};
+export async function fetchData<T>(url: string): Promise<ApiResponse<T>> {
+  try {
+    const response = await axios.get<T>(url);
+    return {
+      data: response.data,
+      status: response.status,
+      statusText: response.statusText,
+      headers: Object.fromEntries(
+        Object.entries(response.headers)
+          .filter(([_, v]) => v !== undefined)
+          .map(([k, v]) => [k, v as string])
+      ),
+      config: response.config,
+    };
+  } catch (error) {
+    throw error;
+  }
+}
