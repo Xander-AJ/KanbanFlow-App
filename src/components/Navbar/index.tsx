@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { ChevronDown, PersonCircle, SearchOutline } from "react-ionicons";
 import db from "../../db.json"; // Assuming db.json is in the same directory or reachable
+import { TaskT } from "../../types";
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<TaskT[]>([]);
 
-  const handleSearch = (event) => {
+  const handleSearch = (event: any) => {
     const term = event.target.value;
     setSearchTerm(term);
 
@@ -15,9 +16,16 @@ const Navbar = () => {
       setSearchResults([]);
     } else {
       // Filter items from db.json based on the title in the "backlog" section
-      const results = db.backlog.filter((task) =>
-        task.title.toLowerCase().includes(term.toLowerCase())
-      );
+      const results = db.backlog
+        .filter((task) => task.title.toLowerCase().includes(term.toLowerCase()))
+        .map((task) => ({
+          ...task,
+          tags: task.tags.map((tag) => ({
+            title: tag.title,
+            bg: tag.color,
+            text: tag.color === "white" ? "black" : "white",
+          })),
+        }));
       setSearchResults(results);
     }
   };
