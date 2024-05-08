@@ -1,0 +1,101 @@
+{
+    "backlog": [
+      {
+        "title": "Admin Panel Front-end",
+        "description": "Lorem ipsum dolor sit amet ..",
+        "priority": "medium",
+        "deadline": 50,
+        "image": "taskImage2.jpg",
+        "alt": "task image",
+        "tags": [
+          { "title": "Test", "color": "#ff0000" },
+          { "title": "Front", "color": "#00ff00" }
+        ]
+      },
+      {
+        "title": "Admin Panel Back-end",
+        "description": "Lorem ipsum dolor sit amet ..",
+        "priority": "low",
+        "deadline": 50,
+        "tags": [
+          { "title": "Test", "color": "#ff0000" },
+          { "title": "Front", "color": "#00ff00" }
+        ]
+      }
+    ],
+    "pending": [
+      {
+        "title": "Admin Panel Back-end",
+        "description": "Lorem ipsum dolor sit amet ..",
+        "priority": "high",
+        "deadline": 50,
+        "tags": [
+          { "title": "Test", "color": "#ff0000" },
+          { "title": "Front", "color": "#00ff00" }
+        ]
+      },
+      {
+        "title": "Admin Panel Front-end",
+        "description": "Lorem ipsum dolor sit amet ..",
+        "priority": "low",
+        "deadline": 50,
+        "image": "taskImage.jpg",
+        "alt": "task image",
+        "tags": [
+          { "title": "Test", "color": "#ff0000" },
+          { "title": "Front", "color": "#00ff00" }
+        ]
+      }
+    ],
+    "todo": [
+      {
+        "title": "Admin Panel Front-end",
+        "description": "Lorem ipsum dolor sit amet ..",
+        "priority": "medium",
+        "deadline": 50,
+        "image": "taskImage3.jpg",
+        "alt": "task image",
+        "tags": [
+          { "title": "Test", "color": "#ff0000" },
+          { "title": "Front", "color": "#00ff00" }
+        ]
+      }
+    ],
+    "doing": [
+      {
+        "title": "Admin Panel Front-end",
+        "description": "Lorem ipsum dolor sit amet ..",
+        "priority": "low",
+        "deadline": 50,
+        "tags": [
+          { "title": "Test", "color": "#ff0000" },
+          { "title": "Front", "color": "#00ff00" }
+        ]
+      },
+      {
+        "title": "Admin Panel Back-end",
+        "description": "Lorem ipsum dolor sit amet ..",
+        "priority": "medium",
+        "deadline": 50,
+        "tags": [
+          { "title": "Test", "color": "#ff0000" },
+          { "title": "Front", "color": "#00ff00" }
+        ]
+      }
+    ],
+    "done": [
+      {
+        "title": "Admin Panel Front-end",
+        "description": "Lorem ipsum dolor sit amet ..",
+        "priority": "high",
+        "deadline": 50,
+        "image": "taskImage.jpg",
+        "alt": "task image",
+        "tags": [
+          { "title": "Test", "color": "#ff0000" },
+          { "title": "Front", "color": "#00ff00" }
+        ]
+      }
+    ]
+  }
+  
