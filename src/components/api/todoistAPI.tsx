@@ -1,4 +1,4 @@
-import { TodoistApi, Project, Item } from "@doist/todoist-api-typescript";
+import { Project, Task, TodoistApi } from "@doist/todoist-api-typescript";
 import React, { useEffect } from "react";
 
 const api = new TodoistApi(process.env.REACT_APP_TODOIST_API_KEY || "");
@@ -8,19 +8,23 @@ const TodoistComponent: React.FC = () => {
     const fetchData = async () => {
       try {
         // Create a new project (board)
-        const newProject: Project = await api.projects.add({
-          name: "My New Board",
-          color: 5,
+        const newProject: Project = await api.addProject({
+          name: "",
         });
 
         // Add tasks to the board
-        const task1: Item = await api.items.add({
-          content: "Task 1",
-          project_id: newProject.id,
+        const task1: Task = await api.addTask({
+          content: "",
+          dueString: "",
+          dueLang: "en",
+          priority: 5,
         });
-        const task2: Item = await api.items.add({
-          content: "Task 2",
-          project_id: newProject.id,
+
+        const task2: Task = await api.addTask({
+          content: "",
+          dueString: "",
+          dueLang: "en",
+          priority: 2,
         });
 
         console.log("New Board Created:", newProject);
